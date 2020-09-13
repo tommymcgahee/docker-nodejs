@@ -1,0 +1,21 @@
+version: "3"
+services:
+  node:
+      # Variables automatically imported from .env
+      build: 
+        context: .
+        args: 
+          - CUSTOM_NODE_VERSION=${NODE_VERSION}
+      environment: 
+        - NODE_ENV=${NODE_ENV}
+        - NODE_PORT=${NODE_PORT}
+        - NODE_BROWSERSYNC_PORT=${NODE_BROWSERSYNC_PORT}
+      expose: 
+        - ${NODE_PORT}
+      container_name: node
+      ports:
+        - ${DOCKER_PORT}:${NODE_PORT}
+        - ${DOCKER_BROWSERSYNC_PORT}:${NODE_BROWSERSYNC_PORT}
+      volumes:
+        - ./:/usr/src/app
+        - /usr/src/app/node_modules

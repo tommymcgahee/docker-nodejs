@@ -1,0 +1,20 @@
+{
+  "name": "node_development",
+  "version": "1.0.0",
+  "description": "NodeJS on Docker",
+  "author": "Tommy McGahee <tommy.mcgahee@gmail.com>",
+  "repository": "",
+  "license": "",
+  "main": "index.js",
+  "scripts": {
+    "development": "nodemon index.js",
+    "production": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "nodemon": "^2.0.4"
+  }
+}
