@@ -1,4 +1,4 @@
-# NodeJS Boilerplate with Express running on Docker
+# Node.js Boilerplate with Express running on Docker
 
 All node functionality exist inside of the container. 
 
